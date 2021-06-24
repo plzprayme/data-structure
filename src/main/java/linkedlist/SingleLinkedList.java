@@ -3,6 +3,37 @@ package linkedlist;
 public class SingleLinkedList<T> {
     public Node<T> head = null;
 
+    private class Node<T> {
+        T data;
+        public Node<T> next = null;
+
+        public Node(T data) {
+            this.data = data;
+        }
+
+        public boolean sameWith(T data) {
+            return data == this.data;
+        }
+
+        public boolean nextIsNull() {
+            return next == null;
+        }
+
+        public void link(Node<T> next) {
+            this.next = next;
+        }
+
+        public void print() {
+            System.out.println(data);
+        }
+
+        @Override
+        public String toString() {
+            return data.toString();
+        }
+    }
+
+
     public void append(T data) {
         Node<T> newNode = new Node<>(data);
         if (head == null) {
