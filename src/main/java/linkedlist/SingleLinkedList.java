@@ -65,4 +65,20 @@ public class SingleLinkedList<T> {
         }
         return node;
     }
+
+    public void deleteNode(T isData) {
+        if (head.sameWith(isData)) {
+            head = head.next;
+            return;
+        }
+
+        Node<T> node = head;
+        while (node.next != null) {
+            if (node.next.sameWith(isData)) {
+                node.next = node.next.next;
+                return;
+            }
+            node = node.next;
+        }
+    }
 }

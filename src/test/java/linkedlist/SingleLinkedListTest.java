@@ -42,6 +42,7 @@ public class SingleLinkedListTest {
         SingleLinkedList<Integer> sll = new SingleLinkedList<>();
         sll.append(1);
         sll.append(2);
+        sll.append(3);
         sll.deleteNode(1);
         sll.printAll();
     }
