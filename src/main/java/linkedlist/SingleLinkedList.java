@@ -3,6 +3,13 @@ package linkedlist;
 public class SingleLinkedList<T> {
     public Node<T> head = null;
 
+    public SingleLinkedList() {
+    }
+
+    public SingleLinkedList(T data) {
+        this.head = new Node<>(data);
+    }
+
     private class Node<T> {
         T data;
         public Node<T> next = null;
@@ -78,7 +85,7 @@ public class SingleLinkedList<T> {
         }
     }
 
-    private boolean search(T isData) {
+    public boolean search(T isData) {
         Node<T> node = head;
         while (!node.nextIsNull()) {
             if (node.sameWith(isData)) {
@@ -87,6 +94,17 @@ public class SingleLinkedList<T> {
             node = node.next;
         }
         return false;
+    }
+
+    public T get(T isData) {
+        Node<T> node = head;
+        while (!node.nextIsNull()) {
+            if (node.sameWith(isData)) {
+                return node.data;
+            }
+            node = node.next;
+        }
+        return null;
     }
 
     private Node<T> getLastNode() {
