@@ -7,7 +7,7 @@ import org.junit.jupiter.api.Test;
 class MyHashTest {
     @Test
     public void 삽입() {
-        MyHash hash = new MyHash(20);
+        MyHashSet hash = new MyHashSet(20);
         hash.saveData("아녕", "하세오");
         hash.saveData("아녕", "하세오2");
         hash.saveData("아농", "하세오2");
@@ -16,7 +16,7 @@ class MyHashTest {
 
     @Test
     public void 조회() {
-        MyHash hash = new MyHash(20);
+        MyHashSet hash = new MyHashSet(20);
         hash.saveData("아녕", "하세오");
         hash.saveData("아녕", "하세오2");
         hash.saveData("아농", "하세오2");

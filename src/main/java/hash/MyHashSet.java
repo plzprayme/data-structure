@@ -1,9 +1,9 @@
 package hash;
 
-public class MyHash {
+public class MyHashSet {
     public Slot[] hashTable;
 
-    public MyHash(int size) {
+    public MyHashSet(int size) {
         this.hashTable = new Slot[size];
     }
 
