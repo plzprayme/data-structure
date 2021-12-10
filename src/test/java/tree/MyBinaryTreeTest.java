@@ -50,4 +50,39 @@ class MyBinaryTreeTest {
 		assertFalse(tree.contains(17));
 	}
 
+	@Test
+	void 원소를_삭제할_수_있다() {
+		// given
+		MyBinaryTree tree = new MyBinaryTree(new Node(10));
+
+		// when
+		tree.put(5);
+		tree.put(4);
+		tree.put(6);
+
+		tree.put(15);
+		tree.put(11);
+		tree.put(16);
+
+		tree.remove(5);
+		tree.remove(4);
+		tree.remove(6);
+
+		tree.remove(15);
+		tree.remove(11);
+		tree.remove(16);
+
+
+		// then
+
+
+		assertFalse(tree.contains(5));
+		assertFalse(tree.contains(4));
+		assertFalse(tree.contains(16));
+		assertFalse(tree.contains(17));
+		assertFalse(tree.contains(6));
+		assertFalse(tree.contains(15));
+		assertFalse(tree.contains(11));
+	}
+
 }
